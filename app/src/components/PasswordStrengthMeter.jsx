@@ -54,6 +54,16 @@ function PasswordStrengthMeter({password}){
             <div className="mt-2 ">
                 <div className="flex justify-center items-center mb-1">
                     <span className="text-xs text-gray-400">PasswordStrengthMeter</span>
+                    <span className="text-xs text-gray-400">{getStrenghText(strength)}</span>
+                </div>
+                <div className="flex space-x-1">
+                    {[...Array(4)].map((_, index) => {
+                        <div
+                            key={index}
+                            className=`h-1 w-1/4 rounded-full transition-colors duration-300
+                            ${}`
+                        />
+                    })}
                 </div>
             </div>
         </>
