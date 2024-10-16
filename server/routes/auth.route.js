@@ -4,7 +4,8 @@ const router=express.Router();
 import { signup, login, logout, verifyEmail, forgotPassword, resetPassword, checkAuth } from "../controller/auth.controller.js";
 import {verifyToken} from "./../middleware/verifyToken.js";
 
-router.get("/check-auth", verifyToken, checkAuth)
+router.get("/check-auth", verifyToken, checkAuth);
+router.get("/update-profile", verifyToken, updateProfile);
 
 router.post("/signup", signup);
 router.post("/login", login);
